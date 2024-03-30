@@ -8,6 +8,11 @@ const Matrix = () => {
     
     
     const handleBgChange =(index)=>{
+
+        if(indexArray.includes(index)){
+            return // Do nothing if the index is already clicked
+        }
+
         document.getElementById(`${index}`).style.backgroundColor='green'
         setIndexArray([...indexArray, index])
         setClickCount(clickCount+1)
